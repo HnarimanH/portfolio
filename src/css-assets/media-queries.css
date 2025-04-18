@@ -1,0 +1,171 @@
+
+@media (max-width: 2000px){
+  .textContainer{
+    width: 50%;
+  }
+  .picContainer{
+    width: 50%;
+    margin-top: 10%;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    width: 90%; 
+    height: auto; 
+    padding: 1rem; 
+  }
+
+  .contact-info {
+    padding: 1rem; 
+    width: 100%; 
+    height: auto;
+  }
+
+  .who {
+    font-size: 16px; 
+  }
+
+  
+  .answer {
+    font-size: 14px; 
+  }
+}
+
+
+@media (max-width: 480px) {
+  .contact-wrapper {
+    width: 95%; 
+    padding: 0.8rem;
+  }
+
+  .contact-info {
+    padding: 0.8rem;
+    font-size: 14px; 
+  }
+
+  .answer {
+    font-size: 12px; 
+  }
+}
+@media (max-width: 1025px) {
+    .Hi{
+      font-size: 7vh;
+    }
+    .tagline{
+      font-size: 3vh;
+    }
+    .bio{
+      font-size: 20px;
+    }
+    .aboutContainer {
+      width: 100%;
+      flex-direction: column-reverse;
+    }
+    
+    
+    .picContainer{
+      height: 30%;
+      width: 100%;
+      
+    }
+    .image {
+      width: 300px;
+      height: 300PX;
+    }
+    .bcontainer{
+      
+      flex-direction: column;
+      
+      height: 100%;
+      width: 100%;
+    }
+    .glitch{
+      display: flex;
+      flex-direction: row;
+    }
+    .box{
+      
+      font-size: 20px;
+      height: 100px;
+      width: 100%;
+      flex-direction: row;
+    }
+    .meContainer{
+      height: auto;
+    }
+    .btn{
+      font-size: 2vh;
+    }
+  }
+
+  
+
+  @media (max-width: 912px){
+    .image {
+      width: 300px;
+      height: 300PX;
+    }
+    .Hi{
+      font-size: 5vh;
+    }
+    .tagline{
+      font-size: 3vh;
+    }
+    .bio{
+      font-size: 20px;
+    }
+    .bcontainer{
+      margin-top: 100PX;
+      flex-direction: column;
+      
+      height: 100%;
+      width: 100%;}
+    .Title1,.Title2,.Title3,.Title4{
+      font-size: 20px;
+    }
+    .contactMe{
+      margin-top: 30%;
+    }
+  
+  .meContainer{
+    height: auto;
+  }
+  .Title1,.Title2,.Title3,.Title4{
+    font-size: 25px;
+  }
+  }
+
+  @media (max-width: 431px){
+    .image {
+      width: 150px;
+      height:150px;
+    }
+    .Hi{
+      font-size: 4vh;
+    }
+    .tagline{
+      font-size: 2vh;
+    }
+    .bio{
+      font-size: 10px;
+    }
+    .bcontainer{
+      margin-top: 100PX;
+      flex-direction: column;
+      
+      height: 100%;
+      width: 100%;}
+    .Title1,.Title2,.Title3,.Title4{
+      font-size: 20px;
+    }
+    .contactMe{
+      margin-top: 50%;
+
+    }
+    .meContainer{
+      height: auto;
+    }
+    
+  }

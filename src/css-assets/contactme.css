@@ -1,0 +1,194 @@
+.contactMe{
+
+    width: 100%;
+    height: auto;
+    background-color: rgb(20, 0, 52);
+    display: flex;
+    
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column; 
+    align-items: center; 
+  
+    transition: all 1s ease;
+}
+.contact-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 30, 30, 1);
+  border: 1px solid #444;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  z-index: 999;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+ 
+.contact-info {
+
+
+    width: auto;
+    height: auto;
+    flex-direction: column;
+
+    background: rgba(20, 20, 20, 0.85);
+    color: #fff;
+    border: 1px solid #444;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    opacity: 1;
+
+    transition: all 0.4s ease-in-out;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+    
+
+
+  
+  
+  .who{
+    color: white;
+    font-size: 20px;
+    color: white;
+    transition: all 0.4s ease-in-out;
+    animation: ghostEffect 2s ease infinite ;
+  }
+ 
+
+
+  @keyframes ghostEffect {
+    0%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+  .who.visible{
+    animation-play-state: paused;
+    
+    color: transparent;
+  }
+  
+.contact-wrapper.visible {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.answer {
+  font-family: 'Fira Code', monospace;
+  position: relative;
+  width: auto;
+  height: auto;
+  border: 0;
+  text-align: center;
+  background: none;
+
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease-out;
+  animation: answerReveal 4s steps(100) 1s 1 normal both, blinkCaret 0.75s step-end infinite;
+}
+
+.answer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 49%;
+  width: 0%;
+  border-bottom: 2px solid red;
+  transition: all 0.3s ease-out;
+  transform: translateX(-50%);
+}
+
+.answer:hover::after {
+  
+  width: 100%;
+} 
+.answer:hover{
+  transition: all 0.3s ease-out;
+  
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blinkCaret {
+  0% {
+    
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+
+.question {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white; 
+  animation: typing 2s steps(100) 1s 1 normal both, blinkCaret 0.75s step-end infinite;
+}
+
+
+@keyframes answerReveal {
+  0% {
+    
+    color: transparent;
+  }
+  75% {
+    
+    color: transparent;
+  }
+  
+  100% {
+    color: white;
+  }
+}
+
+.fade-link {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,57 @@
+body{
+  background-color: black;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: -1.5px;
+  
+}
+html {
+  scroll-behavior: smooth;
+}
+*{
+  box-sizing: border-box;
+
+text-overflow: ellipsis;
+
+}
+p{
+  font-family: "Fira code",monospace;
+}
+.container {
+  margin: 0;
+  height: auto;
+  
+}
+.meContainer{
+  height: 100vh;
+  background: linear-gradient(45deg, purple,black, blue);
+  background-size: 200% 200%;
+  animation: backgroundAnimation 10s ease infinite;
+}
+
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-1px, 1px); }
+  40% { transform: translate(-2px, -1px); }
+  60% { transform: translate(2px, 1px); }
+  80% { transform: translate(1px, -2px); }
+  100% { transform: translate(0); }
+}
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
