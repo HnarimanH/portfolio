@@ -1,4 +1,5 @@
 import CustomSVG from './detective.js';
+import Lamp from './lamp.js';
 import { useState, useRef } from 'react';
 
 function ContactMe() {
@@ -6,7 +7,10 @@ function ContactMe() {
   const [tempVar, setTempVar] = useState("..."); // question
   const [bTempVar, setbTempVar] = useState("Hey!!"); // answer
   const [animationKey, setAnimationKey] = useState(0); // key to reset animation
-  
+  const [isLampOn, setIsLampOn] = useState(false);
+  const toggleLamp = () => {
+    setIsLampOn(!isLampOn);
+  };
   const toggleContact = () => {
     setShowContact(!showContact);
   };
@@ -36,12 +40,14 @@ function ContactMe() {
 
   return (
     <div id="contact" className="contactMe">
-      <div className={`contact-wrapper ${showContact ? 'visible' : ''}`}>
+      
+      <div className={`contact-wrapper ${showContact ? 'visible' : ''} contact-wrapper-back ${isLampOn ? '' : 'black'}`}>
+      <Lamp onClick={toggleLamp} isLampOn={isLampOn}></Lamp>
+      <div className={`scene ${isLampOn ? 'visible' : ''}`}>
         <div className="contact-info">
-        {tempVar.includes('github') ? (
-    <div key={animationKey} className="links fade-links">
-      <div className="fade-link">
-        <a 
+          {tempVar.includes('github') ? (
+          <div key={animationKey} className="links fade-links"><div className="fade-link">
+              <a 
           className = "link"
           href="https://github.com/HnarimanH" 
           target="_blank" 
@@ -49,10 +55,10 @@ function ContactMe() {
           style={{ pointerEvents: 'auto' }}
         >
           Github: HnarimanH
-        </a>
-      </div>
-      <div className="fade-link">
-        <a 
+              </a>
+            </div>
+            <div className="fade-link">
+              <a 
         className = "link"
           href="https://t.me/narimanhosseinzadeh465" 
           target="_blank" 
@@ -60,18 +66,21 @@ function ContactMe() {
           style={{ pointerEvents: 'auto' }}
         >
           Telegram: @narimanhosseinzadeh465
-        </a>
+              </a>
         
-      </div>
-    </div>
+            </div>
+          </div>
+          
   ) : (
     <p className="question" id="question" key={animationKey}>
       {tempVar}
     </p>
   )}
+        
         </div>
         <CustomSVG className='detectiveContainer'></CustomSVG>
         <button onClick={nextQuestion} className='answer' key={animationKey}>{bTempVar}</button>
+      </div>
       </div>
 
       <CustomSVG onClick={toggleContact} className={`detectiveContainer ${showContact ? 'visible' : ''}`}></CustomSVG>
@@ -81,4 +90,3 @@ function ContactMe() {
 }
 
 export default ContactMe;
-

@@ -5,6 +5,7 @@ import './css-assets/media-queries.css';
 import './css-assets/my-work.css';
 import './css-assets/detective.css';
 import './css-assets/contactme.css';
+import './css-assets/Lamp.css';
 
 
 
