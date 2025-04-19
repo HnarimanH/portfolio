@@ -58,7 +58,7 @@ background-color: rgba(30, 30, 30);
     opacity: 1;
 
     transition: all 0.4s ease-in-out;
-    pointer-events: none;
+
     display: flex;
     flex-direction: column;
     justify-content: center;

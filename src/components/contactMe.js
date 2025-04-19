@@ -46,27 +46,20 @@ function ContactMe() {
       <div className={`scene ${isLampOn ? 'visible' : ''}`}>
         <div className="contact-info">
           {tempVar.includes('github') ? (
-          <div key={animationKey} className="links fade-links"><div className="fade-link">
-              <a 
-          className = "link"
-          href="https://github.com/HnarimanH" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          style={{ pointerEvents: 'auto' }}
-        >
-          Github: HnarimanH
-              </a>
-            </div>
-            <div className="fade-link">
-              <a 
-        className = "link"
-          href="https://t.me/narimanhosseinzadeh465" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          style={{ pointerEvents: 'auto' }}
-        >
-          Telegram: @narimanhosseinzadeh465
-              </a>
+                    <div key={animationKey} className="links fade-links">
+                    <div className="fade-link" style={{ display: 'flex', gap: '20px', justifyContent: 'center', alignItems: 'center' }}>
+                      <a href="https://instagram.com/nariman_heathen" target="_blank" rel="noopener noreferrer" title="Instagram">
+                        <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="Instagram" height="30" width="30" />
+                      </a>
+                      <a href="https://t.me/narimanhosseinzadeh465" target="_blank" rel="noopener noreferrer" title="Telegram">
+                        <img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/telegram.svg" alt="Telegram" height="30" width="30" />
+                      </a>
+                      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hosseinzadehnariman465@gmail.com" target="_blank" rel="noopener noreferrer" title="Email">
+                        <img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/email.svg" alt="Email" height="30" width="30" />
+                      </a>
+                      <a href="https://github.com/HnarimanH" target="_blank" rel="noopener noreferrer" title="GitHub">
+                        <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="GitHub" height="30" width="30" />
+                       </a>
         
             </div>
           </div>
