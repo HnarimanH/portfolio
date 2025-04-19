@@ -13,7 +13,7 @@ function ContactMe() {
 
   const conversation = [
     { question: "What do you want?", answer: "How do I reach him?" },
-    { question: "Oh!? Why? What 'Bussines' do you have with him?", answer: "None of Your 'Busines'. He knows me." },
+    { question: "Oh!? Why? What 'Business' do you have with him?", answer: "None of Your 'Business'. He knows me." },
     { question: "Ok Then, here it is.", answer: "Go On!" },
     { question: "github : HnarimanH , telegram : @narimanhosseinzadeh465", answer: "thanks bye" },
   ];
